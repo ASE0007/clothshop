@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 98%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --primary: 222 47% 11%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 215 16% 47%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222 47% 11%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 222 47% 11%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased selection:bg-neutral-200;
+  }
+  h1, h2, h3 {
+    @apply font-serif italic text-neutral-900;
+  }
+}
+
+.card {
+  @apply bg-white rounded-2xl border border-neutral-100 shadow-sm transition-all duration-500 hover:shadow-xl hover:-translate-y-1;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center rounded-full px-8 py-3 text-sm font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50;
+}
+
+.btn-primary {
+  @apply bg-neutral-900 text-white hover:bg-neutral-800 shadow-lg shadow-neutral-900/20;
+}
+
+.btn-ghost {
+  @apply border border-neutral-200 hover:bg-neutral-50 text-neutral-700;
+}
+
+.input {
+  @apply flex h-12 w-full rounded-2xl border border-neutral-200 bg-white px-4 py-3 text-sm transition-all focus:outline-none focus:ring-2 focus:ring-neutral-900 focus:border-transparent;
+}
